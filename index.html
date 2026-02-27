@@ -3,53 +3,94 @@
 
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>4.5 patterns</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>4.6 datalist tags</title>
+ <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 
 <body>
-  <h2>Part 1 - OSIS Number</h2>
-  <form action="#" method="post" autocomplete="on">
-    <label for="osis">OSIS Number</label>
-    <input type="text" id="osis" name="osis"
-           pattern="[0-9]{8}"
-           maxlength="8"
-           required>
-    <input type="submit">
-  </form>
 
 
-  <hr>
+ <form name="example" action="#" method="POST">
+     <label for="language">Select or type a language:</label>
+     <input list="languages" name="language" id="language">
+     <datalist id="languages">
+         <option value="English">
+         <option value="Spanish">
+         <option value="Portuguese">
+         <option value="Japanese">
+     </datalist>
+     <br><br>
+     <input type="submit">
+ </form>
 
 
-  <h2>Part 2 - Password</h2>
-  <form action="#" method="post" autocomplete="on">
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password"
-           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}$"
-           required>
-    <input type="submit">
-  </form>
+ <hr>
 
 
-  <hr>
+ <form action="#" method="POST">
+     <label for="sneakers">Select a Sneaker Brand:</label>
+     <input list="brands" id="sneakers" name="sneakers">
+     
+     <datalist id="brands">
+         <option value="Nike">
+         <option value="New Balance">
+         <option value="Skechers">
+         <option value="Adidas">
+         <option value="Puma">
+         <option value="Converse">
+         <option value="Vans">
+     </datalist>
+     <br><br>
+     <input type="submit">
+ </form>
 
 
-  <h2>Part 3 - Credit Card Number</h2>
-  <form action="#" method="post" autocomplete="on">
-    <label for="cc">Credit Card Number</label>
-    <input type="text" id="cc" name="cc"
-           pattern="[0-9]{16}"
-           maxlength="16"
-           required>
-    <input type="submit">
-  </form>
+ <hr>
 
 
-  <script src="script.js"></script>
+ <form action="#" method="POST">
+     <label for="city">Select a City:</label>
+     <input list="cities" id="city" name="city">
+
+
+     <datalist id="cities">
+         <option value="New York">
+         <option value="Chicago">
+         <option value="Baltimore">
+         <option value="Philadelphia">
+         <option value="Los Angeles">
+         <option value="Houston">
+         <option value="Miami">
+     </datalist>
+     <br><br>
+     <input type="submit">
+ </form>
+
+
+ <hr>
+
+
+ <form action="#" method="POST">
+     <label for="artist">Select Your Favorite Music Artist:</label>
+     <input list="artists" id="artist" name="artist">
+
+
+     <datalist id="artists">
+         <option value="Bad bunny">
+         <option value="Alvaro Diaz">
+         <option value="Young Cister">
+         <option value="The Weeknd">
+         <option value="Tainy">
+         <option value="Paulo Londra">
+     </datalist>
+     <br><br>
+     <input type="submit">
+ </form>
+
+
 </body>
 
 
